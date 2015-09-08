@@ -6,6 +6,10 @@
 setenforce 0
 sed -i -e 's!^SELINUX=.*!SELINUX=disabled!' /etc/selinux/config
 
+chkconfig iptables off
+ckkconfig iptables6 off
+chkconfig postfix off
+
 /usr/bin/yum clean all
 
 /usr/sbin/logrotate –f /etc/logrotate.conf
