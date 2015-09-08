@@ -20,7 +20,7 @@ sed -i -e 's!^SELINUX=.*!SELINUX=disabled!' /etc/selinux/config
 
 /bin/rm -f /etc/udev/rules.d/70*
 
-/bin/sed -i ‘/^(HWADDR|UUID)=/d’ /etc/sysconfig/network-scripts/ifcfg-eth0
+/bin/sed -i '/^(HWADDR|UUID)=/d' /etc/sysconfig/network-scripts/ifcfg-eth0
 
 /bin/rm –rf /tmp/*
 /bin/rm –rf /var/tmp/*
