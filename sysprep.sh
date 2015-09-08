@@ -3,6 +3,9 @@
 /sbin/service rsyslog stop
 /sbin/service auditd stop
 
+setenforce 0
+sed -i -e 's!^SELINUX=.*!SELINUX=disabled!' /etc/selinux/config
+
 /usr/bin/yum clean all
 
 /usr/sbin/logrotate –f /etc/logrotate.conf
