@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+# sysprep script to remove unwanted information before mastering.
+#
 
 /sbin/service rsyslog stop
 /sbin/service auditd stop
